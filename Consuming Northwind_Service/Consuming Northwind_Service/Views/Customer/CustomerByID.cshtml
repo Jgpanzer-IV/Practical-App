@@ -1,0 +1,31 @@
+﻿@model Suntrack.Shared.Customer
+@{
+    string errorMessage = ViewData["errorID"] as string;
+
+}
+
+<div class="jumbotron">
+
+    @if (Model != null)
+    {
+        <p class="display-3">@Model.ContactName</p>
+        <p style="font-size: 24px;" class="lead">@Model.ContactTitle</p>
+        <hr />
+        <p style="font-size: 20px;">Company : @Model.CompanyName</p>
+        <p style="font-size: 20px;">Address : @Model.Address</p>
+        <p style="font-size: 20px;">City : @Model.City</p>
+        <p style="font-size: 20px;">Postal code : @Model.PostalCode</p>
+        <p style="font-size: 20px;">Fex : @Model.Fax</p>
+        <p style="font-size: 20px;">Phone : @Model.Phone</p>      }
+    else {
+        if (errorMessage == null)
+        {
+            <h1 class="text-danger lead">Please Specify customer ID to search</h1>
+        }
+        else { 
+            <h1 class="text-danger lead"> There is no User id : @ViewData["errorID"]</h1>
+            <p class="lead text-info">Please try another user ID.</p>
+        }
+    }
+
+</div>

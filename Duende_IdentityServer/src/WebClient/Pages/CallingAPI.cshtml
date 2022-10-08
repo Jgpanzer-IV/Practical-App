@@ -1,0 +1,22 @@
+﻿@page
+@model MyApp.Namespace.CallingAPIModel
+@{
+}
+
+<div class="text-center p-5 m-5">
+    @if(Model.container != null){
+
+        <h1>Retrieve Identity success</h1>
+        @for (int i = 0; i < Model.container.Count(); i++)
+        {
+            <div class="my-2">
+                <span class="text-muted">@Model.container.ElementAt(i).Claim</span> 
+                <span>:</span>
+                <span class="text-danger font-weigth">@Model.container.ElementAt(i).Value</span>
+            </div>
+        }
+    }
+    else{
+        <h1 class="text-danger">Retrieve Identity Failed</h1>
+    }
+</div>

@@ -1,0 +1,22 @@
+@page
+@functions
+{
+    public string timeRequest{get;set;}
+
+    public void OnGet(){
+        Model.timeRequest = DateTime.Now.ToString("h/mm/ss tt");
+        ViewData["Title"] = "Northwind Shop - Home";
+        ViewData["Author"] = "Karnchai Sak";
+    } 
+
+}
+
+    <div class="jumbotron p-5" style="background-color: slategray;">
+        <p class="display-1">Hello ASP.NET CORE razor page.</p>
+        <p class="display-5">Created by Karnchai</p>
+        <p> This GET request at the time :@Model.timeRequest:. </p>
+        <hr/>
+        <a class="btn btn-primary" href="suppliers">View Suppliers</a>
+        <a class="btn btn-secondary" href="suntrackfeature/employees">Employees Information</a>
+        <a class="btn btn-secondary" href="custommers">Customers</a>
+    </div>

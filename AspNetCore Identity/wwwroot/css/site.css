@@ -1,0 +1,27 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+*{
+  font-family: Quicksand;
+}
+
+@font-face{
+  font-family: Quicksand;
+  src: url('../fonts/Quicksand.ttf');
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

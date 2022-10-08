@@ -1,0 +1,18 @@
+POST https://localhost:5001/api/customers HTTP/1.1
+Content-Type: application/json
+Content-Length: 374
+
+{
+    "customerID": "OWODS",
+    "companyName": "Suntrack01",
+    "contactName": "Karnchai Sakkarnjana",
+    "contactTitle": "Project Manager",
+    "address": "722 DaVinci Blvd.",
+    "city": "Bangkok",
+    "region": "Olde",
+    "postalCode": "10210",
+    "country": "Thailand",
+    "phone": "(+66) 0909026917",
+    "fax": "(206) 234-45-533",
+    "orders": []
+}

@@ -1,0 +1,65 @@
+@page
+@model Areas.Account.Register.RegisterModel
+@{
+    ViewData["Title"] = "Sign up";
+}
+
+<h1 class="display-4 text-center my-5">@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="row my-4 justify-content-center">
+        <div class="col-md-4 col-lg-3">
+            <div class="form-group my-4">
+                <label asp-for="UserSignUp.UserName" class="text-muted d-block"></label>
+                <span asp-validation-for="UserSignUp.UserName" class="text-danger"></span>
+                <input asp-for="UserSignUp.UserName" class="form-control">
+            </div>
+            <div class="form-group my-4">
+                <label asp-for="UserSignUp.Email" class="text-muted d-block"></label>
+                <span asp-validation-for="UserSignUp.Email" class="text-danger"></span>
+                <input asp-for="UserSignUp.Email" class="form-control">
+            </div>
+            <div class="form-group my-4">
+                <label asp-for="UserSignUp.JobTitle" class="text-muted d-block"></label>
+                <span asp-validation-for="UserSignUp.JobTitle" class="text-danger"></span>
+                <input asp-for="UserSignUp.JobTitle" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="form-group my-4">
+                <label asp-for="UserSignUp.InitialSaving" class="text-muted d-block"></label>
+                <span asp-validation-for="UserSignUp.InitialSaving" class="text-danger"></span>
+                <input asp-for="UserSignUp.InitialSaving" class="form-control">
+            </div>
+            <div class="form-group my-4">
+                <label asp-for="UserSignUp.Password" class="text-muted d-block"></label>
+                <span asp-validation-for="UserSignUp.Password" class="text-danger"></span>
+                <input asp-for="UserSignUp.Password" class="form-control">
+            </div>
+            <div class="form-group my-4">
+                <label asp-for="UserSignUp.ConfirmPassword" class="text-muted d-block"></label>
+                <span asp-validation-for="UserSignUp.ConfirmPassword" class="text-danger"></span>
+                <input asp-for="UserSignUp.ConfirmPassword" class="form-control">
+            </div>
+        </div>
+    </div>  
+    
+    <div class="row justify-content-center my-4">
+        <div class="col-md-8 col-lg-6">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+    </div>
+
+    <div class="row my-5 justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <button class="btn btn-danger text-white w-100">Sign up</button>
+            <a asp-page="Login" class="d-block text-center my-3 text-muted">Sign in</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial"></partial>
+
+}

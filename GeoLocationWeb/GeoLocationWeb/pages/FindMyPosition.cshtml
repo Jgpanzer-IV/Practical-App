@@ -1,0 +1,106 @@
+﻿@page
+
+@functions{
+
+}
+
+@{
+
+}
+
+
+
+<div class="jumbotron bg-dark m-5 text-center rounded shadow">
+
+	<div class="w-75 text-center p-4 shadow-sm">
+		<p class="lead bg-light text-dark p-3 w-100" id="latShow"></p>
+		<p class="lead bg-light text-dark p-3 w-100" id="longShow"></p>
+	</div>
+
+	<div class="w-75 text-left p-4">
+		<button class="btn btn-danger" id="btnGetPosition" onclick="getLocation();">Get Current Position</button>
+	</div>
+
+</div>
+
+
+
+<!-- Reference to Javascript google map API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiwBlGIQmnaVtDhVK8p-SBQ8-LyRMLU1c"></script>
+
+
+<script type="text/javascript">
+
+	
+
+	function getLocation(){
+		if (navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(successCallback,errorCallback,{
+				enableHighAccuracy: true,
+				timeout: 1000 * 60 * 5,
+				maximumAge: 60 * 1000
+			});
+
+
+
+
+		}
+	}
+
+	function successCallback(position){
+		
+		var latPosition = position.coords.latitude;
+		var longPosition = position.coords.longitude;  
+		document.getElementById("latShow").innerHTML = latPosition;
+		document.getElementById("longShow").innerHTML = longPosition;
+
+
+		// Create Geocoder class instance
+		var geocoder = new google.maps.Geocoder();
+
+		// Create position object represent the center of the object
+		var latLng = new google.maps.LatLng(latPosition,longPosition);
+
+		//const latLng = {lat: parseFloat(latPosition), lng: parseFloat(longPosition)};
+
+		// Call .geocode method to reverse the geolocation
+		geocoder.geocode({'latLng':latLng}, function (results,status){
+		
+			if (status == google.maps.GeocoderStatus.OK){
+				if (results){
+					
+					alert(results[0].formatted_address);
+				}
+			}
+		
+		});
+		
+	}
+
+	function errorCallback(error){
+		
+		switch(error.code){
+			
+			case PERMISSION_DENIED:
+				alert("User denied access position");
+				break;
+
+			case TIMEOUT:
+				alert("Time out access position");
+			break;
+
+			case POSITION_UNAVAILABLE:
+				alert("Position unavailable");
+			break;
+
+			default:
+				alert("Unknown error");
+			break;
+		
+		}
+		
+	}
+
+
+
+</script>

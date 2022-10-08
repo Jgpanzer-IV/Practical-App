@@ -1,0 +1,19 @@
+﻿@page
+@using Suntrack.Shared
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NorthwindEmployees.MyFeature.Pages.EmployeePage
+
+
+<div class="text-center display-2 shadow p-5">
+    Employees Information
+</div>
+
+<div class="m-4">
+    <div id="accordionr" class="accordion accordion-flush">
+        @foreach(Employee employee in Model.Employees) {
+            <partial name="_Employee" model="employee"/>
+        }
+     </div>
+</div>
+
+ 

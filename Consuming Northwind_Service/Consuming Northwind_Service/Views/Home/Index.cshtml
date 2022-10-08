@@ -1,0 +1,48 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Home Page";
+    bool continueContry = true;
+}
+
+<div class="jumbotron-fluid justify-content-center p-4 shadow-sm rounded">
+    <h1 class="display-3">Consuming Northwind API</h1>
+    <hr />
+    <p class="lead">This Mvc web application will consume Customer in Northwind database Which is
+    hosted as a Web API, Therefore it can be consumed by orther type of application</p>
+    <h3>Our Consummer plateform supported</h3>
+    <ul>
+        <li>Desktop Application</li>
+        <li>Mobile Application</li>
+        <li>Web Application</li>
+    </ul>
+</div>
+
+<div class="m-4 p-3">
+
+    @if (Model != null)
+    {
+        @for (int i = 0; ;i+=3)
+        {
+            <div class="list-group list-group-horizontal-sm">
+                @for (int n = i; (n < i+3 && n < Model.Count()); n++) { 
+                    <a asp-controller="Customer" asp-action="AllCustomers" asp-route-country="@(Model.ElementAt(n))"
+                        class="list-group-item list-group-item-action">
+                        @Model.ElementAt(n)
+                    </a>
+                }
+            </div>
+            @if (i > Model.Count()) {
+                break;
+            }
+        }
+    }
+    else { 
+        <h1 class="text-danger">Couldn't download countries </h1>
+    }
+
+
+</div>
+
+
+

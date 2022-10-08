@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xIDE5+BW/gys3HHIk+sV09sdyxAO5Adp1j8Y+mINcZS+kWxMCY1OIR+fizyaWXKnG6WNb4yYMFVLPeBJLal36Q==",
+  "success": true,
+  "projectFilePath": "D:\\Software_Development\\PracticalApps\\Duende_IdentityServer\\src\\GeneralClient\\GeneralClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sakka\\.nuget\\packages\\identitymodel\\6.0.0\\identitymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\Sakka\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

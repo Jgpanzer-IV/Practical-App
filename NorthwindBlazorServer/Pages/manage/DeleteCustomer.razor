@@ -1,0 +1,55 @@
+@page "/manage/deletecustomer/{id}"
+@inject ICustomerRepository customerRepo
+
+<div class="d-@(errorControl) text-center text-@(errorStatus) p-5 mt-5 shadow">
+    @errorMessage
+</div>
+
+<div class="p-5 shadow my-5">
+    @if(customer != null){  
+            <p class="text-center display-5 text-info my-5"> This customer will be deleted </p>
+            <p class="text-start lead my-3">ID @customer.CustomerID</p>
+            <p class="text-start lead my-3">Name @customer.CompanyName</p>
+            <p class="text-start lead my-3">ContactName @customer.ContactName</p>
+            <p class="text-start lead my-3">ContactTitle @customer.ContactTitle</p>
+            <p class="text-start lead my-3">Address @customer.Address</p>
+        <button class="btn btn-danger" @onclick="OnDeleteAsync">Delete</button>
+    }else {
+        <p class="display-5 text-info my-5"> Loading... </p>
+    }
+</div>
+
+
+@code{
+    [Parameter]
+    public string? id {get;set;}
+    public string errorMessage {get;set;} = string.Empty;
+    public string errorControl {get;set;} = "none";
+    public string errorStatus {get;set;} = "danger";
+    private Customer customer = new Customer();
+    
+    protected async override Task OnParametersSetAsync()
+    {
+        if(id == null){
+            errorMessage = "Please specify id of customer to delete";
+            errorControl = "block";
+        }
+        else{
+            customer = await customerRepo.RetrieveAsync(id);
+            if (customer == null){
+                errorMessage = "There is no id of customer to delete";
+                errorControl = "block";
+            }
+        }
+    }
+
+    private async Task OnDeleteAsync(){
+        bool result = await customerRepo.DeleteAsync(id.ToString());
+        errorStatus = (result)? "info":"danger";
+        errorMessage = (result)? "The customer has been deleted":"An error ocurred while process delete the customer";
+        errorControl = "block";
+    }
+
+
+}
+

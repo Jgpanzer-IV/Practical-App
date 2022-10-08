@@ -1,0 +1,15 @@
+﻿@*
+*@
+
+@{
+    ViewData["Title"] = "Secured Page";
+}
+
+<div class="jumbotron">
+    <p class="display-3 text-center">Secured Page</p>
+    <hr />
+    @foreach (var i in User.Claims) { 
+        <p class="text-left">@i.Type : @i.Value</p>
+    }
+</div>
+

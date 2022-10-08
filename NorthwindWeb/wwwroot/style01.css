@@ -1,0 +1,17 @@
+
+a.cardDisplay{
+    text-decoration: none !important;
+    color: black !important;
+    text-transform: capitalize !important;
+}
+
+
+div.cardDisplay:hover{
+    transition: all;
+    transform: scale(1.12,1.12);
+    transition-duration: 0.3s;
+
+    border-color: rgb(172, 0, 0);
+    border-width: 0.5px;
+    box-shadow: none;
+}

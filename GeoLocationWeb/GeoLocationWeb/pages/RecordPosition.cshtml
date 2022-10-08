@@ -1,0 +1,84 @@
+﻿@page
+
+<!-- Code behind Razor file -->
+@functions{
+
+
+}
+
+<!-- Initial code path -->
+@{
+
+}
+
+
+
+<div class="jumbotron shadow bg-dark text-light m-5 p-5">
+	
+	<div class="d-flex align-items-center flex-column">
+		
+		<h1 class="fs-1 display-4">Recoder position</h1>
+		<p class="fs-3">Let try record your position by click the button.</p>
+		<p class="fs-4">This is work by checking every time you move, It will call the callback function every time you change the position.</p>
+
+		<div class="m-4 p-4 w-75">
+			<p class="text-info fs-5" id="monitor"></p>
+			<div class="m-3 p-1 text-center shadow-sm displayInfo bg-light text-dark rounded" id="latitudeLbl"></div>
+			<div class="m-3 p-1 text-center shadow-sm displayInfo bg-light text-dark rounded" id="longitudeLbl"></div>
+		</div>
+
+		<div class="text-center">
+			<button class="btn btn-success mx-5" id="startBtn"> Start Record </button>
+			<button class="btn btn-danger mx-5" id="stopBtn" > Stop Record </button>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+	var idPosition = false;
+
+	var recordBtn = document.getElementById("startBtn").onclick = () => {
+		
+		if(navigator.geolocation){
+			
+			idPosition = navigator.geolocation.watchPosition(successCallback,errorCallback,{
+				enableHighAccuracy: true,
+				timeout: 2000,
+				maximumAge: 1000
+			});
+			
+		}
+		
+	
+	}
+
+	var stopBtn = document.getElementById("stopBtn").onclick = () => {
+		
+		document.getElementById("monitor").innerHTML = "Stoped recording";
+		navigator.geolocation.clearWatch(idPosition);
+		
+	}
+
+
+	function successCallback(position) {
+		
+		document.getElementById("monitor").innerHTML = "Recording";
+		document.getElementById("latitudeLbl").innerHTML = position.coords.latitude;
+		document.getElementById("longitudeLbl").innerHTML = position.coords.longitude;
+	
+	}
+
+	function errorCallback(){
+		alert("There is an error about accessing your position, Please try again.");
+	}
+
+
+
+
+</script>

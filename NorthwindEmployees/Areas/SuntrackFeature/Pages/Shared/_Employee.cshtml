@@ -1,0 +1,26 @@
+@model Suntrack.Shared.Employee
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="Head@employee.LastName" >
+        <button class="accordion-button" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            aria-expanded="false"
+            data-bs-target="#@Model.LastName" 
+            aria-controls="@Model.LastName" >@Model.FirstName @Model.LastName
+        </button>
+    </h2>
+    <div id="@Model.LastName" 
+        class="accordion-collapse collapse"  
+        aria-labelledby="Head@employee.LastName" 
+        data-bs-parent="#accordionr">
+
+        <div class="accordion-body">
+            <span class="display-5">ID : @Model.EmployeeID</span>
+            <p class="lead">@Model.Notes</p>
+        </div>
+    </div>
+</div>
+
+
+

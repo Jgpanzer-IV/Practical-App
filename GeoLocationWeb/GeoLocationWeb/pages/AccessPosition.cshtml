@@ -1,0 +1,132 @@
+﻿@page
+
+@functions{
+
+
+	
+
+}
+@{
+	ViewData["Title"] = "Accessing Position";
+
+}
+
+<div class="jumbotron p-5 shadow-sm">
+	<h1> Location Indentifyer </h1>
+	<p>Getting latitute and longitute by clicking this button</p>
+
+	<button class="btn btn-danger" onclick="getlocation();"> Get Position </button>
+</div>
+
+
+<div class="shadow m-5 p-5" id="result">
+
+	<div class="mb-5">
+		<span class="display-6"> Latitute  : </span> <span class="font-weight-bold spanTitle" id="latitute"></span>
+		<br />
+		<span class="display-6"> Longitute : </span> <span class="font-weight-bold spanTitle" id="longitute"></span>
+		<br/>
+	</div>
+
+	<div class="m-3 p-5 bg-dark text-light rounded shadow-sm">
+		<span >Accuracy : </span> <span id="accuracy" class="font-weight-bold spanLarge"></span> <br/>
+		<span >Altitude : </span> <span id="altitude" class="font-weight-bold spanLarge">  </span> <br/>
+		<span >Altitude Accuracy : </span> <span id="alAccuracy" class="font-weight-bold spanLarge">  </span> <br/>
+		<span >Head direction : </span> <span id="head" class="font-weight-bold spanLarge">  </span> <br />
+		<span >Speed : </span> <span id="speed" class="font-weight-bold spanLarge">  </span> <br />
+		<span >Time Stamp  : </span> <span id="timestamp" class="font-weight-bold spanLarge">  </span> <br />
+	</div>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+	function getlocation(){
+
+		// Geolocation API accessed by 'navigator' object in javascript
+
+		// This code is checking that the browser is support accessing location or not.
+		if(navigator.geolocation)
+		{
+			// Get the current position of the client that opened this page, This will perform express client permission
+			/*
+				 getCurrentPosition( 
+						success Callback,  <- Function that will be called when it success with parameter 'position' (require)
+						error Callback,    <- Function that will be called when it cannot access the position or the browser not suppord (optional)
+						option{}    <- This parameter can be specified option of the Geolocation to config following three value 
+							- enableHighAccracy (True/False)	: Set to get high accracy or not
+							- timeout (millisecond)				: the second that will wait the position 
+							- maximumAge (millisecond)			: set the life-time of the location information in second 
+
+				) 
+			*/
+
+			// This method will trying to access the position
+			//     user allowed    -> success method callback 
+			//     user unallowed  -> error method callback
+			navigator.geolocation.getCurrentPosition(successPosition,errorPosition,
+				{
+					enableHighAccuracy: true,
+					timeout: 10000,
+					maximumAge: 3000
+				});
+		}
+		else{
+			alert("Your browser or server are not support to access position.");
+		}
+	
+	}
+
+	// Declare the fuction that will be called when it success and receive collected parameter 'position'
+	/*
+		parameter 'position' ->  
+								coords    :   (This object contain a lot of useful attribute value)
+								timestamp :   (This contain time stamp that user visit this web page)
+	*/
+	function successPosition(position){
+	
+		// get information about the position that collected
+		let latitude   = position.coords.latitude;
+		let longtitude = position.coords.longitude; 
+		let accuracy = position.coords.accuracy;
+		let timeStamp = position.timestamp;
+		
+		// The rest attribute value will get from GPS (These cannot access from computer)
+		let direction = position.coords.heading;
+		let altitude = position.coords.altitude;
+		let alAccuracy = position.coords.altitudeAccuracy;
+		let speed = position.coords.speed;
+
+		// Convert timestamp to DateTime
+		let dateStamp = new Date(timeStamp);
+
+		let year = dateStamp.getFullYear();
+		let month = dateStamp.getMonth();
+		let day = dateStamp.getDate();
+		let hour = dateStamp.getHours();
+		let minit = dateStamp.getMinutes();
+
+
+		// Display those information to html 
+		document.getElementById("latitute").innerHTML = latitude;
+		document.getElementById("longitute").innerHTML = longtitude; 
+		document.getElementById("accuracy").innerHTML = accuracy;
+		document.getElementById("altitude").innerHTML = altitude;
+		document.getElementById("alAccuracy").innerHTML = alAccuracy;
+		document.getElementById("speed").innerHTML = speed;
+		document.getElementById("timestamp").innerHTML = year + "/" + month + "/"+ day + ".     " + hour + ".hour : " + minit + ".minits";
+	}
+
+
+	// Declare the Error function that will be called when there is no permission to access the client position
+	// 'errorObj' contain useful two property
+	//		- code		: descrip the type of error
+	//		- message	: contain the message of the error 
+	function errorPosition(errorObj){
+		alert("There is an error cause to calculate the position." + "Error code : " + errorObj.code);
+	}
+
+</script>

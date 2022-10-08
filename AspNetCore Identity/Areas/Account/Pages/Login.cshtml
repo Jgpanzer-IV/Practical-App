@@ -1,0 +1,36 @@
+@page
+@model IdentityAPI.Areas.Account.Login.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1 class="display-4 my-5 text-center">@ViewData["Title"]</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-5">
+        <form method="post">
+            <div class="form-check mt-5">
+                <input asp-for="CredentialUser.RememberMe" class="form-check-input">
+                <label class="form-check-label">Remember me</label>
+            </div>
+            <div class="form-group my-3">
+                <span asp-validation-for="CredentialUser.UserName"></span>
+                <input asp-for="CredentialUser.UserName" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group my-3">
+                <span asp-validation-for="CredentialUser.Password"></span>
+                <input asp-for="CredentialUser.Password" class="form-control" placeholder="Password">
+            </div>
+            <p class="text-danger my-3">@ViewData["Message"]</p>            
+            <button class="btn btn-danger w-100 mb-3">Sign in</button>
+            <div class="row justify-content-between">
+                <div class="col">
+                    <a asp-page="" class="text-muted">Forgot my password</a>
+                </div>
+                <div class="col text-end">
+                    <a asp-page="Register" class="text-muted">Create a new account</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

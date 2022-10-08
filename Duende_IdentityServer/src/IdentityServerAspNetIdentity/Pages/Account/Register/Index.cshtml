@@ -1,0 +1,39 @@
+@page
+@model IdentityServerAspNetIdentity.Pages.Register.IndexModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1 class="text-center my-5">@ViewData["Title"]</h1>
+
+<div class="m-5">
+
+    <form method="post">
+        <div class="my-4">
+            <label class="text-muted">Username</label>
+            <span asp-validation-for="RegisterCredencial.UserName" class="text-danger"></span>
+            <input asp-for="RegisterCredencial.UserName" class="form-control">
+        </div>
+        <div class="my-4">
+            <label class="text-muted">Email</label>
+            <span asp-validation-for="RegisterCredencial.Email" class="text-danger"></span>
+            <input asp-for="RegisterCredencial.Email" class="form-control">
+        </div>
+        <div class="my-4">
+            <label class="text-muted">Password</label>
+            <span asp-validation-for="RegisterCredencial.Password" class="text-danger"></span>
+            <input asp-for="RegisterCredencial.Password" class="form-control">
+        </div>
+        <div class="my-4">
+            <label class="text-muted">Confirm Password</label>
+            <span asp-validation-for="RegisterCredencial.ConfirmPass" class="text-danger"></span>
+            <input asp-for="RegisterCredencial.ConfirmPass" class="form-control">
+        </div>
+        <input asp-for="ReturnUrl" class="d-non">
+
+        <div asp-validation-summary="All"></div>
+
+        <button type="submit" class="btn btn-success w-100">Register</button>
+    </form>
+    
+</div>

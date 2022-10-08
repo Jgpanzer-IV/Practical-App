@@ -1,0 +1,33 @@
+@page "/manage/createcustomer"
+@inject ICustomerRepository customerRepo
+@inject NavigationManager navigator
+
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1>Create new Customer</h1> 
+        <div class="p-5 my-5 rounded shadow">
+            <CustomerDetail Customer="@customer" OnValidSubmit="@OnCreate" />
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+
+
+
+
+@code{
+
+    private Customer customer = new Customer();
+
+    private async Task OnCreate(){
+        await customerRepo.CreateAsync(customer);
+        navigator.NavigateTo("/customers");
+    }
+
+
+
+}

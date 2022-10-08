@@ -1,0 +1,144 @@
+﻿@page
+
+@functions{
+
+}
+
+@{
+
+}
+
+<div class="jumbotron text-center p-5 shadow">
+	
+	<h1>Map Direction</h1>
+	<hr />
+	<p style="text-indent:60px">This is a page that show how to Use Google map direction api, In the code behind
+		having a code example as a best practic.
+	</p>
+
+</div>
+
+<div class="shadow rounded my-5 p-5">
+
+
+	<div class="row">
+		<div class="col-md-6">
+			<label for="LatSrcGetter" class="lead">Source Latitude</label>
+			<input class="form-control"  type="text" id="LatSrcGetter" />
+		</div>
+		<div class="col-md-6">
+			<label for="LongSrcGetter" class="lead">Source Longitude</label>
+			<input class="form-control"  type="text" id="LongSrcGetter"/>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<label for="LatDstGetter" class="lead">Destination Latitude</label>
+			<input class="form-control" type="text" id="LatDstGetter" />
+		</div>
+		<div class="col-md-6">
+			<label for="LongDstGetter" class="lead">Destination Longitude</label>
+			<input class="form-control"  type="text" id="LongDstGetter"/>
+		</div>
+	</div>
+	<div class="my-4">
+		<button id="Calculate" onclick="getMap()" class="btn btn-success">Calculate Map</button>
+	</div>
+
+</div>
+
+<div class="rounded shadow" style="height:800px; width:100%;">
+
+	<div id="displayMap" style="width:100%; height:100%;">-</div>
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyDiwBlGIQmnaVtDhVK8p-SBQ8-LyRMLU1c"></script>
+
+<script type="text/javascript">
+	
+	// Global variable to be used by The map function and 'draw path' function
+	var points = [{},{}];
+	var map;
+
+	function getMap(){
+		points[0].lat = document.getElementById("LatSrcGetter").value;
+		points[0].long = document.getElementById("LongSrcGetter").value;
+
+		points[1].lat = document.getElementById("LatDstGetter").value;
+		points[1].long = document.getElementById("LongDstGetter").value;
+
+		// Create variable that represent center position
+		const centerLocation = {lat: parseFloat(points[0].lat) , lng: parseFloat(points[0].long)};
+		const destLocation = {lat: parseFloat(points[1].lat), lng: parseFloat(points[1].long)};
+
+		alert(points[0].lat);
+		alert(points[0].long);
+		// 
+		var mapOption = {
+			center: centerLocation,
+			zoom: 10,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		};
+
+		
+		// Create map object using global variable 'map'
+		map = new google.maps.Map(document.getElementById("displayMap"),mapOption);
+	
+		// Create Marker for both position		
+		var marker = new google.maps.Marker({
+			position: centerLocation,
+			map:map
+			
+		});
+		var marker = new google.maps.Marker({
+			position: destLocation,
+			map:map
+			
+		}); 
+
+		// Start draw path
+		drawPath();
+
+	}
+
+	function drawPath(){
+	
+		// Create object service for draw path.
+		var directionsService = new google.maps.DirectionsService();
+		alert("Service Created");
+
+		// Create poly-line and specify the color and stroke weight of the line.
+		var poly = new google.maps.Polyline({strokeColor:"#FF0000", strokeWeight:4});
+		alert("Start deaw");
+
+		// Create request object for drawing path-line from origin to destination, And specify TravelMode.
+		var request = {
+			origin: new google.maps.LatLng(points[0].lat, points[0].long),
+			destination: new google.maps.LatLng(points[1].lat, points[1].long),
+			travelMode: google.maps.DirectionsTravelMode.DRIVING
+		};
+		alert("Sent Request");
+
+		// Start send request and receive status direction.
+		directionsService.route(request, function(response, status){
+
+			// Check the response status.
+			if (status == google.maps.DirectionsStatus.OK)
+			{
+				// If status is OK, Then start draw the path and specify map and poly-line object to draw.
+				new google.maps.DirectionsRenderer({
+
+					map:map,
+					polylineOptions: poly,
+					directions:response
+				});
+
+			}
+		});
+		alert("Complete Draw direction line");
+		
+	}
+
+</script>

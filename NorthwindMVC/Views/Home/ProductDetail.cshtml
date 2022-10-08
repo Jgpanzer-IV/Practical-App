@@ -1,0 +1,15 @@
+@model NorthwindMVC.Models.HomeProductDetailVM
+@{
+
+   ViewData["Title"] = "Product Detail";
+}
+
+<div class="jumbotron shadow">
+    <div class="text-left display-4">@Model.product.ProductName</div>
+    <hr>
+    <div class="text-left lead">@(Model.product.UnitPrice)$</div>
+    <div class="text-left"> Quantity per Unit : @Model.product.QuantityPerUnit</div>
+    <div class="text-left"> In Stock : @Model.product.UnitsInStock</div>
+    <div class="text-left"> Category : @Model.category</div>
+</div>
+

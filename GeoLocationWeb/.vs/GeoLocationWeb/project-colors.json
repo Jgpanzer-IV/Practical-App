@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "403e5193-6d28-4fba-a25d-233c902a66ee": {
+      "ProjectGuid": "403e5193-6d28-4fba-a25d-233c902a66ee",
+      "DisplayName": "GeoLocationWeb",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "NorthwindWeb"
+		},
+		{
+			"path": "NorthwindContextLib"
+		},
+		{
+			"path": "NorthwindEntityLib"
+		},
+		{
+			"path": "NorthwindEmployees"
+		},
+		{
+			"path": "SimpleWeb"
+		},
+		{
+			"path": "NorthwindMVC"
+		},
+		{
+			"path": "NorthwindService"
+		},
+		{
+			"path": "Authentication_and_Authorization"
+		},
+		{
+			"path": "Consuming Northwind_Service"
+		},
+		{
+			"path": "NorthwindBlazorServer"
+		},
+		{
+			"path": "NorthwindBlazorWasm"
+		}
+	]
+}

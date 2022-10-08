@@ -1,0 +1,95 @@
+﻿@model Consuming_Service.Models.CustomerViewModel
+@{
+    bool apiError = TempData["ApiError"] as bool? ?? false;
+    IEnumerable<string> countries = ViewData["countries"] as IEnumerable<string>;
+}
+
+
+<div class="jumbotron m-5 p-4">
+
+    <h1 class="display-4 m-5">Register new Customer</h1>
+    <hr />
+
+    @if (apiError) {
+        <h1 class="display-4 text-danger">An error occure with api that was requested</h1>
+    }
+    else
+    {
+        <form method="post">
+
+            <div class="form-group">
+                <label class="form-label" asp-for="CustomerID"></label>
+                <span asp-validation-for="CustomerID" class="text-danger form-label d-block"></span>
+                <input class="form-control" asp-for="CustomerID" placeholder="ex. FGOEK (Upper case 5 character)" />
+            </div>
+
+            <div class="w-100 row">
+                <div class="form-group col-md">
+                    <label class="form-label" asp-for="ContactName"></label>
+                    <span asp-validation-for="ContactName" class="text-danger form-label d-block"></span>
+                    <input class="form-control" asp-for="ContactName" placeholder="ex. Mr.Kolre perkceaw" />
+                </div>
+
+                <div class="form-group col-md">
+                    <label class="form-label" asp-for="ContactTitle">Contect Title</label>
+                    <span asp-validation-for="ContactTitle" class="text-danger form-label d-block"></span>
+                    <input class="form-control" asp-for="ContactTitle" placeholder="ex. Project manager" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="form-label" asp-for="CompanyName"></label>
+                <span asp-validation-for="CompanyName" class="text-danger form-label d-block"></span>
+                <input class="form-control" asp-for="CompanyName" placeholder="ex. Suntrack co" />
+            </div>
+
+            @if (countries == null) { 
+                <h2 class="text-danger display-4 lead"> An error occured with api while getting list of country</h2>
+            }else {
+                <div class="form-group">
+                    <label for="@(nameof(Model.Country))" class="form-label">Country</label>
+                    <select name="@(nameof(Model.Country))" class="form-control">
+                        @for (byte i = 0; i < countries.Count(); i++) { 
+                            <option value="@countries.ElementAt(i)">@countries.ElementAt(i)</option>
+                        }
+                    </select>
+
+                </div>
+            }
+
+            <div class="w-100 row">
+
+                <div class="form-group col-md">
+                    <label asp-for="Address" class="form-label"></label>
+                    <span asp-validation-for="Address" class="text-danger d-block"></span>
+                    <input asp-for="Address" class="form-control"/>
+                </div>
+
+                <div class="form-group col-md">
+                    <label asp-for="City" class="form-label"></label>
+                    <span asp-validation-for="City" class="text-danger d-block"></span>
+                    <input asp-for="City" class="form-control" />
+                </div>
+
+                <div class="form-group col-md">
+                    <label asp-for="Region" class="form-label"></label>
+                    <span asp-validation-for="Region" class="text-danger d-block"></span>
+                    <input asp-for="Region" class="form-control" />
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" asp-for="Phone"></label>
+                <span asp-validation-for="Phone" class="text-danger form-label d-block"></span>
+                <input class="form-control" asp-for="Phone" placeholder="ex. 090-334-3523" type="tel" />
+            </div>
+
+            <button type="submit" class="btn btn-success"> Register </button>
+
+        </form>
+
+    }
+
+</div>

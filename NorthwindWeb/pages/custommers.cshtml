@@ -1,0 +1,89 @@
+@page
+@model NorthwindWeb.Pages.CustommerPage
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<div class="jumbotron jumbotron-fluid shadow rounded p-5">
+    <div class="container">
+        <div class="display-4 my-4"> Customers - @ViewData["selectedCountry"] </div>
+        <hr class="my-2">
+
+        <div class="m-4">
+            <form method="get">
+                <div class="form-group">
+                    <label for="country">Search by country</label>
+                    <select class="form-select custom-select" name="country" id="country">
+                        @foreach (string item in Model.countryies)
+                        {
+                            @if( item == ViewData["selectedCountry"] as string){
+                                <option selected value=@item>@item</option>
+                            }else {
+                                <option value=@item>@item</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success my-2">Search</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="d-flex justify-content-center flex-wrap">
+    <div class="row justify-content-center w-100">
+        @foreach (var item in Model.customers)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 col-8 my-3">
+                <a data-bs-toggle="modal" data-bs-target="#@item.CustomerID">
+                    <div class="card cardDisplay shadow" style="height: fit-content;">
+                        <div class="card-header">@item.ContactTitle</div>
+                        <div class="card-body">
+                            <div class="card-title lead">@item.CompanyName</div>
+                            <div class="card-subtitle">@item.ContactName</div>
+                        </div>
+                        <div class="card-footer">
+                            <p>@item.Phone</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" data-bs-backdrop="static" id=@item.CustomerID>
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <div class="modal-title display-4">@item.ContactName</div>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="lead">@item.ContactTitle</div>
+                            <div><span class="text-muted small">ID : </span>@item.CustomerID</div>
+                            <hr>
+                            <div><span class="text-muted small">Phone : </span> @item.Phone</div>
+                            <div><span class="text-muted small">Address : </span>@item.Address</div>
+                            <div><span class="text-muted small">City : </span>@item.City</div>
+                            <div><span class="text-muted small">PostalCode : </span> @item.PostalCode</div>
+                            <div><span class="text-muted small">Fax : </span> @item.Fax</div>
+                            <hr>
+                            <div><span class="text-muted small">Order Count : </span>
+                                @item.Orders.Count()
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-info" data-bs-dismiss="modal">Order details</a>
+                            <button class="close btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

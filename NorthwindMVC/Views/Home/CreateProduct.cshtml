@@ -1,0 +1,57 @@
+@model NorthwindMVC.Models.HomeCreateProductVM
+@{
+    ViewData["Title"] = "Create new Product";
+}
+
+<div class="row m-lg-5 p-lg-5 m-md-3 p-md-3 m-sm-2 p-sm-2 shadow">
+
+    <div class="col bg-light p-5">
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input id="name" type="text" class="form-control mb-2" name="ProductName"> 
+            </div>
+            <div class="form-group">
+                <label for="price">Price per Unit</label>
+                <input id="price" type="number" class="form-control mb-2" name="UnitPrice"> 
+            </div>
+            <div class="form-group">
+                <label for="inStock">Number Unit in stock</label>
+                <input id="inStock" type="number" class="form-control mb-2" name="UnitInStock"> 
+            </div>
+            <div class="form-check">
+                <input id="discontinue" type="checkbox" class="form-check-input" name="Discontinue"> 
+                <label class="form-check-label" for="discontinue">Discontinue?</label>
+            </div>
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+@if (Model != null)
+{
+    <div class="jumbotron shadow">
+        <div class="text-left display-4">@Model.Product.ProductName</div>
+        <hr>
+        <div class="text-left lead">@(Model.Product.UnitPrice)$</div>
+        <div class="text-left "> In Stock : @Model.Product.UnitInStock</div>
+        <div class="text-left"> Discontinue : @Model.Product.Discontinue</div>
+    </div>
+
+    @if (Model.Error)
+    {
+        <div class="col">
+            @foreach (string errorMessage in Model.ValidationError)
+            {
+                <div class="alert alert-danger">@errorMessage</div>
+            }
+        </div>
+    }
+}
+
+
+
+

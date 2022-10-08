@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Suntrack.Shared.Customer>
+@{
+    
+}
+
+<div class="jumbotron justify-content-center p-3 my-3">
+    <p class="display-3 lead">Customers page</p>
+    <p> List by Specified @(ViewData["ListBy"]) </p>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Customer ID</th>
+            <th>Contect Name</th>
+            <th>Country</th>
+            <th>Company Name</th>
+            <th>More detail</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var i in Model) {
+        <tr>
+            <td>@i.CustomerID</td>
+            <td>@i.ContactName</td>
+            <td>@i.Country</td>
+            <td>@i.CompanyName</td>
+            <td>
+                <a class="btn btn-info" asp-action="CustomerByID" asp-route-id="@(i.CustomerID)">See more</a>
+            </td>
+        </tr>
+        }
+
+    </tbody>
+
+
+</table>
+

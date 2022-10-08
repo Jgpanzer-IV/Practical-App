@@ -1,0 +1,21 @@
+﻿<Router AppAssembly="@typeof(App).Assembly">
+
+    <Found Context="routeData">
+
+        <!-- If it found route path, then render the Default layout and insert the founded path layout in @Body of default layout--> 
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        
+    </Found>
+
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+
+        <!-- If the request route path is not found, then render the <p> element and insert it into Layout which is 'MainLayout' -->
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    
+    </NotFound>
+
+</Router>

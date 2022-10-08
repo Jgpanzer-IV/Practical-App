@@ -1,0 +1,95 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@functions{
+
+	public void OnGet()
+	{
+		
+	}
+
+}
+
+@{
+
+}
+
+
+<div class="w-100 text-center bg-dark m-5 rounded p-4">
+	<h1 class="text-white">Interactive Map Api</h1>
+	<p class="text-white lead">This map is using Javascrip API and google MAP API</p>
+</div>
+
+<div class="jumbotron shadow rounded p-5 w-100 m-5">
+
+	<div class="text-left">
+
+			<div class="form-group">
+				<label for="MyLat">Latitude</label>
+				<input type="text" class="form-control" id="MyLat" />
+			</div>
+
+			<div class="form-group">
+				<label for="MyLong">Longitude</label>
+				<input type="text" class="form-control" id="MyLong" />
+			</div>
+
+			<button class="btn btn-success my-2" id="btnShow">Search</button>
+	</div>
+
+	<div class="text-center shadow-sm rounded p-3">
+		<div id="map" style="width:800px; height:800px;"></div>
+	</div>
+
+
+</div>
+
+
+<!-- Google map API resource -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiwBlGIQmnaVtDhVK8p-SBQ8-LyRMLU1c"></script>
+
+<!-- Requesting to use Google map javascript API  -->
+<script type="text/javascript">
+	document.getElementById("btnShow").onclick = () => {
+
+		let mylat = document.getElementById("MyLat").value;
+		let mylong = document.getElementById("MyLong").value;
+
+		const uluru = { lat: parseFloat(mylat), lng: parseFloat(mylong) };
+
+		// Map configuration object
+		var mapOptions = {
+			zoom: 18,
+			center : uluru,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		};
+
+		// Map object
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+		// Marker object
+		var marker = new google.maps.Marker({
+			position: uluru,					// Set to the location of marker
+			map: map,							// Set to your map object
+			title: "my first Marker",			// Title of marker
+			animation : google.maps.Animation.BOUNCE // There are two type of animation (.DROP) and (.BOUNCE)
+			// icon : "name.extention" ex-> "green.png"
+		}); 
+
+		// Window information object 
+		var info = new google.maps.InfoWindow({
+			content : "My Information window"
+		});
+
+		// Add event to marker
+		google.maps.event.addListener(marker, "click", function(){
+			
+			// Display window information
+			info.open(map,marker);
+		
+		});
+		
+	}
+</script> 
+
+

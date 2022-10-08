@@ -1,0 +1,75 @@
+@page "/customers"
+@inject ICustomerRepository customerCache
+
+<div class="p-5 shadow m-5">
+
+    <h1 class="display-4 lead mt-5">Customer page</h1>
+    <hr>
+    <a href="/manage/createcustomer" class="btn btn-info">Create new Product</a>
+
+</div>
+@if (customers == null)
+{
+
+    <p class="display-5 text-muted">Loading. . .</p>
+
+}
+else
+{
+    <div class="p-5 m-5 shadow">
+        <table class="table shadow-sm rounded p-5">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Contact Name</th>
+                    <th>Contact Title</th>
+                    <th>Address</th>
+                    <th>Manager</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @for (int i = 0; i < customers.Count(); i++)
+                {
+                    <tr>
+                        <td>@customers.ElementAt(i).CustomerID</td>
+                        <td>@customers.ElementAt(i).CompanyName</td>
+                        <td>@customers.ElementAt(i).ContactName</td>
+                        <td>@customers.ElementAt(i).ContactTitle</td>
+                        <td>@customers.ElementAt(i).City</td>
+                        <td>
+                            <a href="/manage/updatecustomer/@customers.ElementAt(i).CustomerID" class="btn btn-info">
+                                <i class="oi oi-pencil" aria-hidden="true"></i>
+                            </a>
+                            <a href="/manage/deletecustomer/@customers.ElementAt(i).CustomerID" class="btn btn-danger">
+                                <i class="oi oi-trash" aria-hidden="true"></i>
+                            </a>
+                            
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+}
+
+@code {
+
+    private ICollection<Customer>? customers;
+    private string deleteID { get; set; } = string.Empty;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await customerCache.RetrieveAllAsync();
+    }
+
+    private async Task OnDeleteAsync()
+    {
+        bool result = await customerCache.DeleteAsync(deleteID);
+    }
+
+}
