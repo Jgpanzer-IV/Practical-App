@@ -1,0 +1,17 @@
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\bin\Debug\net6.0\publisher.exe
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\bin\Debug\net6.0\publisher.deps.json
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\bin\Debug\net6.0\publisher.runtimeconfig.json
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\bin\Debug\net6.0\publisher.dll
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\bin\Debug\net6.0\publisher.pdb
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\bin\Debug\net6.0\MQTTnet.dll
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.csproj.AssemblyReference.cache
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.AssemblyInfoInputs.cache
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.AssemblyInfo.cs
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.csproj.CoreCompileInputs.cache
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.csproj.CopyComplete
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.dll
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\refint\publisher.dll
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.pdb
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\publisher.genruntimeconfig.cache
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\publisher\obj\Debug\net6.0\ref\publisher.dll

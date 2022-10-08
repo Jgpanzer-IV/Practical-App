@@ -1,0 +1,2 @@
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\dotnetPublish\subscriber\bin\Release\net6.0\win10-x64\publish\client.pdb
+C:\Users\pixel\OneDrive\Documents\Software_Development\ExampleApp\Example\MQTT-Communication\dotnetPublish\subscriber\bin\Release\net6.0\win10-x64\publish\client.exe

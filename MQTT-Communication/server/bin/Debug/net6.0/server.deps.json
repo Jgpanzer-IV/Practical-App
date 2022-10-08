@@ -1,0 +1,76 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "server/1.0.0": {
+        "dependencies": {
+          "MQTTnet": "4.1.1.318",
+          "Serilog": "2.12.0",
+          "Serilog.Sinks.Console": "4.1.1-dev-00896"
+        },
+        "runtime": {
+          "server.dll": {}
+        }
+      },
+      "MQTTnet/4.1.1.318": {
+        "runtime": {
+          "lib/net6.0/MQTTnet.dll": {
+            "assemblyVersion": "4.1.1.318",
+            "fileVersion": "4.1.1.318"
+          }
+        }
+      },
+      "Serilog/2.12.0": {
+        "runtime": {
+          "lib/net6.0/Serilog.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.12.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.Console/4.1.1-dev-00896": {
+        "dependencies": {
+          "Serilog": "2.12.0"
+        },
+        "runtime": {
+          "lib/net5.0/Serilog.Sinks.Console.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MQTTnet/4.1.1.318": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k1a7CGmWZv97hMuokI7hmqCqjs07/gJ+UtRKYYJkvph0wkSJBO0HAuLV8OOPPiM6BZnDYvy65/Y8EuNKjZqCng==",
+      "path": "mqttnet/4.1.1.318",
+      "hashPath": "mqttnet.4.1.1.318.nupkg.sha512"
+    },
+    "Serilog/2.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xaiJLIdu6rYMKfQMYUZgTy8YK7SMZjB4Yk50C/u//Z4OsvxkUfSPJy4nknfvwAC34yr13q7kcyh4grbwhSxyZg==",
+      "path": "serilog/2.12.0",
+      "hashPath": "serilog.2.12.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.Console/4.1.1-dev-00896": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-72QU/vM7UYq8YF9/5cyafJhMDgisp13+RY1JS+MLVN/+SsgK6855lRMxsaftsaoAMspeY+DNdes0UOgeJcfpmg==",
+      "path": "serilog.sinks.console/4.1.1-dev-00896",
+      "hashPath": "serilog.sinks.console.4.1.1-dev-00896.nupkg.sha512"
+    }
+  }
+}
