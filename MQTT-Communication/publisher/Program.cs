@@ -2,6 +2,7 @@
 using System.Text.Encodings;
 using MQTTnet;
 using MQTTnet.Client;
+using MQTTnet.Exceptions;
 
 
 
@@ -24,6 +25,14 @@ public class Program{
             
             await mqttClient.ConnectAsync(mqttClientOption,CancellationToken.None);
             
+            mqttClient.DisconnectedAsync += e => {
+                
+                Console.WriteLine(" ~~~Disconnected~~~");
+                Console.WriteLine(" ~~~Doing dispose connection~~~");
+
+                return Task.CompletedTask;
+            };
+         
             while(true){
                 Console.Write("Enter message to be published to the mqtt server [exit to stop] : ");
                 string? message = Console.ReadLine();
@@ -37,6 +46,9 @@ public class Program{
 
                 await mqttClient.PublishAsync(applicationMessage,CancellationToken.None);
             }
+           
+
+            
 
             await mqttClient.DisconnectAsync();
 

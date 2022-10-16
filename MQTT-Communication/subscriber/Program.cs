@@ -30,6 +30,15 @@ public class Program{
                 return Task.CompletedTask;
             };
 
+            mqttClient.DisconnectedAsync += e => {
+                
+                Console.WriteLine(" ~~~Disconnected~~~");
+                Console.WriteLine(" ~~~Shutinh down the server~~~");
+
+                return Task.CompletedTask;
+            };
+
+
             // Making connection to the server using clientOption.
             await mqttClient.ConnectAsync(mqttClientOption,CancellationToken.None);
             Console.WriteLine("Connected to the server.");
@@ -39,14 +48,17 @@ public class Program{
                 .WithTopicFilter(f => {f.WithTopic("myTopic");})
                 .Build();
 
-            // Connect to the subscribe with option
+            // subscribe to the server with option
             await mqttClient.SubscribeAsync(mqttSubscribeOption,CancellationToken.None);
             
             Console.WriteLine("Connected to the mqtt server with topic:MyMQTTServer.");
             Console.WriteLine("Press any key to stop.");
             Console.ReadKey();
 
+            // Call these two in stop or end of the line.
+            // These will release and resetting the consumed resources.
             await mqttClient.DisconnectAsync();
+            mqttClient.Dispose();
         }
 
     }

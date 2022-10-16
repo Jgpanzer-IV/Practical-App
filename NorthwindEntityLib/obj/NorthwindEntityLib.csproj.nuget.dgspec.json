@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {}
+    "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {}
   },
   "projects": {
-    "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {
+    "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
+        "projectUniqueName": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
         "projectName": "NorthwindEntityLib",
-        "projectPath": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
-        "packagesPath": "C:\\Users\\Sakka\\.nuget\\packages\\",
-        "outputPath": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\obj\\",
+        "projectPath": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
+        "packagesPath": "C:\\Users\\Karnchai Sakkarnjana\\.nuget\\packages\\",
+        "outputPath": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sakka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karnchai Sakkarnjana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,16 +55,31 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

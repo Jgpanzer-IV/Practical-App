@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fkaDPaf/BjB26o03iRqNb4CE53VvkCghEI7fOVg1ukM=",
+  "Hash": "I5F2cIXRLPMz5BaOq5CE1or4y+TtJmzFAaH+faBvDFU=",
   "Source": "NorthwindBlazorServer",
   "BasePath": "_content/NorthwindBlazorServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "NorthwindBlazorServer\\wwwroot",
       "Source": "NorthwindBlazorServer",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\NorthwindBlazorServer.styles.css",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\NorthwindBlazorServer.styles.css",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "NorthwindBlazorServer.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\NorthwindBlazorServer.styles.css"
+      "OriginalItemSpec": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\bundle\\NorthwindBlazorServer.styles.css"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\NorthwindBlazorServer.bundle.scp.css",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\NorthwindBlazorServer.bundle.scp.css",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "NorthwindBlazorServer.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\NorthwindBlazorServer.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\NorthwindBlazorServer.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\css\\site.css",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\favicon.ico",
       "SourceId": "NorthwindBlazorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorServer\\wwwroot\\",
+      "ContentRoot": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorServer\\wwwroot\\",
       "BasePath": "_content/NorthwindBlazorServer",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

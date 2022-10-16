@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RRNS8Yeu+DiXP/V39oWhk53HQNcPEuIA7gysrxfyRwQQCLkAfkcWdrB/1P4eHScCyabIfTd7e1Xy2eX90y9Udg==",
+  "dgSpecHash": "RyClS65xUT0K6gVZMZXjtIaAKn4AMZjwECZN0H1p7BHY3CryoasmHkr9OOzuNO8MDAg+e7v2mfwa3VDOE/KvdA==",
   "success": true,
-  "projectFilePath": "D:\\Software_Development\\PracticalApps\\NorthwindBlazorWasm\\Shared\\NorthwindBlazorWasm.Shared.csproj",
+  "projectFilePath": "D:\\Software-Developement\\Practical-App\\NorthwindBlazorWasm\\Shared\\NorthwindBlazorWasm.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
