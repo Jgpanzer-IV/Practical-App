@@ -38,10 +38,14 @@ public class SubscribeProcessor : ISubscribeProcessor
         var option = new MqttClientOptionsBuilder()
             .WithTcpServer(connectedBroker,connectedPort)
             .Build();
+
         await _mqttClient.ConnectAsync(option,CancellationToken.None);
-        var subscribeOption =  _mqttFactory.CreateSubscribeOptionsBuilder()
-                .WithTopicFilter(f => {f.WithTopic("myTopic");})
-                .Build();
+
+        var subscribeOption =  _mqttFactory
+            .CreateSubscribeOptionsBuilder()
+            .WithTopicFilter(f => {f.WithTopic("myTopic");})
+            .Build();
+            
         await _mqttClient.SubscribeAsync(subscribeOption,CancellationToken.None);
     }
 

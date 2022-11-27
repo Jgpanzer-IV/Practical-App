@@ -22,8 +22,9 @@ ISubscribeProcessor processor = new SubscribeProcessor(optionDbBuilder.Options);
 builder.Services.AddSingleton<ISubscribeProcessor>(processor);
 await processor.InitializationAsync("broker.hivemq.com",1883);
 
-
-
+IPublisherProcessor publisher = new PublishProcessor(optionDbBuilder.Options);
+builder.Services.AddSingleton<IPublisherProcessor>(publisher);
+await publisher.InitializeConnectionAsync("broker.hivemq.com",1883);
 
 
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Software_Development\\PracticalApps\\NorthwindService\\NorthwindService.csproj": {}
+    "D:\\Software-Developement\\Practical-App\\NorthwindService\\NorthwindService.csproj": {}
   },
   "projects": {
-    "D:\\Software_Development\\PracticalApps\\NorthwindContextLib\\NorthwindContextLib.csproj": {
+    "D:\\Software-Developement\\Practical-App\\NorthwindContextLib\\NorthwindContextLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Software_Development\\PracticalApps\\NorthwindContextLib\\NorthwindContextLib.csproj",
+        "projectUniqueName": "D:\\Software-Developement\\Practical-App\\NorthwindContextLib\\NorthwindContextLib.csproj",
         "projectName": "NorthwindContextLib",
-        "projectPath": "D:\\Software_Development\\PracticalApps\\NorthwindContextLib\\NorthwindContextLib.csproj",
-        "packagesPath": "C:\\Users\\Sakka\\.nuget\\packages\\",
-        "outputPath": "D:\\Software_Development\\PracticalApps\\NorthwindContextLib\\obj\\",
+        "projectPath": "D:\\Software-Developement\\Practical-App\\NorthwindContextLib\\NorthwindContextLib.csproj",
+        "packagesPath": "C:\\Users\\Karnchai Sakkarnjana\\.nuget\\packages\\",
+        "outputPath": "D:\\Software-Developement\\Practical-App\\NorthwindContextLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sakka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karnchai Sakkarnjana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {
-                "projectPath": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj"
+              "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {
+                "projectPath": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj"
               }
             }
           }
@@ -55,30 +55,45 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {
+    "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
+        "projectUniqueName": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
         "projectName": "NorthwindEntityLib",
-        "projectPath": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
-        "packagesPath": "C:\\Users\\Sakka\\.nuget\\packages\\",
-        "outputPath": "D:\\Software_Development\\PracticalApps\\NorthwindEntityLib\\obj\\",
+        "projectPath": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\NorthwindEntityLib.csproj",
+        "packagesPath": "C:\\Users\\Karnchai Sakkarnjana\\.nuget\\packages\\",
+        "outputPath": "D:\\Software-Developement\\Practical-App\\NorthwindEntityLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sakka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karnchai Sakkarnjana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,45 +134,60 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Software_Development\\PracticalApps\\NorthwindService\\NorthwindService.csproj": {
+    "D:\\Software-Developement\\Practical-App\\NorthwindService\\NorthwindService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Software_Development\\PracticalApps\\NorthwindService\\NorthwindService.csproj",
+        "projectUniqueName": "D:\\Software-Developement\\Practical-App\\NorthwindService\\NorthwindService.csproj",
         "projectName": "NorthwindService",
-        "projectPath": "D:\\Software_Development\\PracticalApps\\NorthwindService\\NorthwindService.csproj",
-        "packagesPath": "C:\\Users\\Sakka\\.nuget\\packages\\",
-        "outputPath": "D:\\Software_Development\\PracticalApps\\NorthwindService\\obj\\",
+        "projectPath": "D:\\Software-Developement\\Practical-App\\NorthwindService\\NorthwindService.csproj",
+        "packagesPath": "C:\\Users\\Karnchai Sakkarnjana\\.nuget\\packages\\",
+        "outputPath": "D:\\Software-Developement\\Practical-App\\NorthwindService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sakka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karnchai Sakkarnjana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Software_Development\\PracticalApps\\NorthwindContextLib\\NorthwindContextLib.csproj": {
-                "projectPath": "D:\\Software_Development\\PracticalApps\\NorthwindContextLib\\NorthwindContextLib.csproj"
+              "D:\\Software-Developement\\Practical-App\\NorthwindContextLib\\NorthwindContextLib.csproj": {
+                "projectPath": "D:\\Software-Developement\\Practical-App\\NorthwindContextLib\\NorthwindContextLib.csproj"
               }
             }
           }
@@ -169,8 +199,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
               "target": "Package",
@@ -187,7 +217,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -199,7 +230,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

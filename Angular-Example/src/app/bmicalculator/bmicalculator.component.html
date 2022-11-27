@@ -1,0 +1,55 @@
+<div class="my-3">
+  <label class="form-label d-block">Username</label>
+  <input
+    class="form-control"
+    type="text"
+    (input)="onUpdateValue()"
+    [(ngModel)]="username"
+  />
+</div>
+
+<div class="my-3">
+  <label class="form-label d-block">Age (y)</label>
+  <input
+    class="form-control"
+    type="number"
+    (input)="onUpdateValue()"
+    [(ngModel)]="age"
+  />
+</div>
+
+<div class="my-3">
+  <label class="form-label d-block">Mess (kg)</label>
+  <input
+    class="form-control"
+    type="number"
+    (input)="weightInput($event)"
+    (change)="onUpdateValue()"
+    [(ngModel)]="weight"
+  />
+</div>
+
+<hr />
+
+<div class="my-3">
+  <label class="form-label d-block">Height (m)</label>
+  <input
+    class="form-control"
+    type="number"
+    (input)="heightInput($event)"
+    (change)="onUpdateValue()"
+    [(ngModel)]="height"
+  />
+</div>
+
+<button
+  class="w-100 btn btn-success"
+  [disabled]="!calculateable"
+  (click)="clearValue()"
+>
+  clear information
+</button>
+
+<div class="my-3 p-5 shadow rounded">
+  <h4 class="text-center lead">{{ completeMessage }}</h4>
+</div>

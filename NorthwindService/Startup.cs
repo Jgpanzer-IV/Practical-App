@@ -41,7 +41,12 @@ namespace NorthwindService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            services.AddCors(action => {
+                action.AddPolicy("CommonPolicy", policy => {
+                    policy.WithMethods("GET","POST","PUT","DELETE");
+                    policy.WithOrigins("http://localhost:4200", "http://localhost:5000"); // Specify only domain of the server, Do not include relative paht.
+                });
+            });
 
 
             string path = System.IO.Path.Combine(Environment.CurrentDirectory,"..","Northwind.db");
@@ -70,8 +75,7 @@ namespace NorthwindService
                 }
             )
             .AddXmlDataContractSerializerFormatters()
-            .AddXmlSerializerFormatters()
-            .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            .AddXmlSerializerFormatters();
 
             // Register a scoped dependency service implementation for the repository customers-cache 
             services.AddScoped<ICustomerRepository,CustomerRepository>();
@@ -110,12 +114,7 @@ namespace NorthwindService
             
 
             // Feature cross-origin for security reason
-            app.UseCors(configurePolicy: option =>
-            {
-                option.WithMethods("GET","POST","PUT","DELETE"); // Specify Http method 
-                option.WithOrigins("https://localhost:5002"); // Specify domain name of the client to allow requesting 
-
-            });
+            app.UseCors("CommonPolicy");
 
             // Route for heal check feature
             app.UseHealthChecks(path: "/apiheal");

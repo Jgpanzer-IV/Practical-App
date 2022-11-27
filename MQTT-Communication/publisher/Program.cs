@@ -18,21 +18,22 @@ public class Program{
 
         using(var mqttClient = mqttFactory.CreateMqttClient()){
             
-
+            // Create option for mqtt client that is set the broker and port.
             var mqttClientOption = new MqttClientOptionsBuilder()
                 .WithTcpServer(hiveM_Broker,hiveM_Port)
                 .Build();
             
+            // Connect to the Broker with specified port.
             await mqttClient.ConnectAsync(mqttClientOption,CancellationToken.None);
             
+            // Set the background account
             mqttClient.DisconnectedAsync += e => {
-                
-                Console.WriteLine(" ~~~Disconnected~~~");
-                Console.WriteLine(" ~~~Doing dispose connection~~~");
-
+                Console.WriteLine(" ~~~ Disconnected ~~~");
+                Console.WriteLine(" ~~~ Doing dispose connection ~~~");
                 return Task.CompletedTask;
             };
          
+            // Publishing message inside looping using MqttApplicationMessageBuilder() 
             while(true){
                 Console.Write("Enter message to be published to the mqtt server [exit to stop] : ");
                 string? message = Console.ReadLine();

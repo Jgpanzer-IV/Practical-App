@@ -1,0 +1,50 @@
+<header>
+  <div
+    class="offcanvas offcanvas-start show text-bg-dark"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+    tabindex="-1"
+    id="offcanvasScrolling"
+    aria-labelledby="offcanvasScrollingLabel"
+  >
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title" id="offcanvasScrollingLabel">
+        Customer Northwind
+      </h1>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+        <li
+          routerLinkActive="active"
+          routerLink="/home"
+          class="list-group-item my-2 list-group-item-action"
+        >
+          Overview Customer
+        </li>
+        <li
+          routerLinkActive="active"
+          routerLink="/customer"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="list-group-item my-2 list-group-item-action"
+        >
+          Manage Customer
+        </li>
+        <li
+          routerLinkActive="active"
+          routerLink="/customer/register"
+          class="list-group-item my-2 list-group-item-action"
+        >
+          Create Customer
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container" style="margin-left: 400px">
+    <router-outlet></router-outlet>
+  </div>
+</article>
+
+<footer></footer>
